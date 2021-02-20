@@ -18,7 +18,7 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 子用户信息
+ * 企业微信子用户
  *
  * @method integer getUin() 获取子用户用户 ID
  * @method void setUin(integer $Uin) 设置子用户用户 ID
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置子用户用户名
  * @method integer getUid() 获取子用户 UID
  * @method void setUid(integer $Uid) 设置子用户 UID
- * @method string getRemark() 获取子用户备注
- * @method void setRemark(string $Remark) 设置子用户备注
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
  * @method integer getConsoleLogin() 获取子用户能否登录控制台
  * @method void setConsoleLogin(integer $ConsoleLogin) 设置子用户能否登录控制台
  * @method string getPhoneNum() 获取手机号
@@ -36,12 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountryCode(string $CountryCode) 设置区号
  * @method string getEmail() 获取邮箱
  * @method void setEmail(string $Email) 设置邮箱
+ * @method string getWeChatWorkUserId() 获取企业微信UserId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeChatWorkUserId(string $WeChatWorkUserId) 设置企业微信UserId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class SubAccountInfo extends AbstractModel
+class WeChatWorkSubAccount extends AbstractModel
 {
     /**
      * @var integer 子用户用户 ID
@@ -59,7 +63,7 @@ class SubAccountInfo extends AbstractModel
     public $Uid;
 
     /**
-     * @var string 子用户备注
+     * @var string 备注
      */
     public $Remark;
 
@@ -84,6 +88,12 @@ class SubAccountInfo extends AbstractModel
     public $Email;
 
     /**
+     * @var string 企业微信UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WeChatWorkUserId;
+
+    /**
      * @var string 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -93,11 +103,13 @@ class SubAccountInfo extends AbstractModel
      * @param integer $Uin 子用户用户 ID
      * @param string $Name 子用户用户名
      * @param integer $Uid 子用户 UID
-     * @param string $Remark 子用户备注
+     * @param string $Remark 备注
      * @param integer $ConsoleLogin 子用户能否登录控制台
      * @param string $PhoneNum 手机号
      * @param string $CountryCode 区号
      * @param string $Email 邮箱
+     * @param string $WeChatWorkUserId 企业微信UserId
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -144,6 +156,10 @@ class SubAccountInfo extends AbstractModel
 
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("WeChatWorkUserId",$param) and $param["WeChatWorkUserId"] !== null) {
+            $this->WeChatWorkUserId = $param["WeChatWorkUserId"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
