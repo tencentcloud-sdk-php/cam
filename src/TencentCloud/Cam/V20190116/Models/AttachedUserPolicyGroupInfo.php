@@ -18,7 +18,7 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用户关联策略(随组管理)信息
+ * 用户关联策略(随组关联)信息
  *
  * @method integer getGroupId() 获取分组ID
  * @method void setGroupId(integer $GroupId) 设置分组ID
